@@ -3,7 +3,6 @@ return {
   -- optional for icon support
   version = "*",
   -- branch = "master",
-  event = 'VimEnter',
   dependencies = { "nvim-tree/nvim-web-devicons" },
   -- or if using mini.icons/mini.nvim
   -- dependencies = { "echasnovski/mini.icons" },
