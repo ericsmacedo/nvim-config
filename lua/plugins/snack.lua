@@ -17,8 +17,9 @@ return {
     scroll = { enabled = true },
     words = { enabled = true },
 
-    picker = { enabled = false },
-    explorer = { enabled = false },
+    picker = { enabled = true },
+    explorer = { enabled = true },
+
 
 
     toggle = {
@@ -52,6 +53,7 @@ return {
   }, 
 
   keys = {
+    { "<leader>e", function() Snacks.explorer() end, desc = "File Explorer" },
     { "<leader>n", function()
       if Snacks.config.picker and Snacks.config.picker.enabled then
         Snacks.picker.notifications()

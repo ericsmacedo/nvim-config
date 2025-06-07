@@ -6,7 +6,17 @@ return {
   dependencies = {
     "nvim-tree/nvim-web-devicons",
   },
-  config = function()
-    require("nvim-tree").setup {}
-  end,
+
+  opts = {
+    view = {
+      relativenumber = true,
+      number = true, -- optional: show absolute line number for current line
+    },
+  },
+
+  keys = {
+    { "<c-n>", "<cmd>NvimTreeToggle<cr>" },
+    { "<c-k>", "<c-k>", ft = "fzf", mode = "t", nowait = true },
+  },
+
 }
