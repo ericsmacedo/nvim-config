@@ -66,9 +66,14 @@ return {
   opts = {
 
     files = {
-      fd_opts = [[--color=never --type f --hidden --follow --exclude .venv --ignore-file ]]
+      fd_opts = [[--type f --hidden --follow --exclude .venv --ignore-file ]]
+      .. vim.fn.expand("$HOME/.config/nvim/lua/.ignore"),
+
+      rg_opts = [[--color=never --hidden --type f --type l --ignore-file ]]
       .. vim.fn.expand("$HOME/.config/nvim/lua/.ignore"),
     },
+
+    
 
     fzf_opts = {
       -- options are sent as `<left>=<right>`
