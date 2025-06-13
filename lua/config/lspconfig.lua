@@ -1,5 +1,5 @@
 
-local servers = { "html", "cssls", "lua_ls"}
+local servers = { "pylsp", "jedi_language_server", "lua_ls"}
 vim.lsp.enable(servers)
 
 

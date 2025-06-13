@@ -19,7 +19,7 @@ return {
     { "<leader>:", "<cmd>FzfLua command_history<cr>", desc = "Command History" },
     { "<leader>/", "<cmd>FzfLua search_history<cr>", desc = "Command History" },
     { "<leader>fb", "<cmd>FzfLua buffers sort_mru=true sort_lastused=true<cr>", desc = "Buffers" },
-    { "<leader>fc", "<cmd>FzfLua files cwd~/.config/nvim<cr>", desc = "Search Config" },
+    { "<leader>fc", "<cmd>FzfLua files cwd=~/.config/nvim<cr>", desc = "Search Config" },
     { "<leader>ff", "<cmd>FzfLua files<cr>", desc = "Search Files" },
     { "<leader>fg", "<cmd>FzfLua git_files<cr>", desc = "Find Files (git-files)" },
     { "<leader>fr", "<cmd>FzfLua oldfiles<cr>", desc = "Recent" },
