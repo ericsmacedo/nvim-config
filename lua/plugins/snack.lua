@@ -20,6 +20,9 @@ return {
     picker = { enabled = true },
     explorer = { enabled = true },
 
+    win = {
+      preview = { wo = { number = true, relativenumber = true, signcolumn = "no" } },
+    },
 
 
     toggle = {
@@ -53,7 +56,14 @@ return {
   }, 
 
   keys = {
-    { "<leader>e", function() Snacks.explorer() end, desc = "File Explorer" },
+    { "<leader>e", function()
+      Snacks.explorer()
+      vim.defer_fn(function()
+        if vim.bo.filetype == "snacks_picker_list" then  -- replace with actual filetype if different
+          vim.wo.relativenumber = true
+        end
+      end, 100)  -- small delay to ensure buffer is loaded
+    end, desc = "File Explorer" },
     { "<leader>n", function()
       if Snacks.config.picker and Snacks.config.picker.enabled then
         Snacks.picker.notifications()
