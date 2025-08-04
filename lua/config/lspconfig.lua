@@ -1,7 +1,14 @@
 
-local servers = { "pylsp", "jedi_language_server", "lua_ls"}
+local servers = { "ruff", "jedi_language_server", "lua_ls"}
 vim.lsp.enable(servers)
 
+vim.lsp.config('ruff', {
+  init_options = {
+    settings = {
+      -- Ruff language server settings go here
+    }
+  }
+})
 
 vim.lsp.config('pylsp', {
   cmd = {vim.call("expand", "~/.config/nvim/.venv/bin/pylsp")},
